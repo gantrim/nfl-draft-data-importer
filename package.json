@@ -1,0 +1,30 @@
+{
+  "name": "console-app-boilerplate",
+  "version": "1.0.0",
+  "description": "NodeJs console app boilerplate with config and es6/babel compiler",
+  "main": "service.js",
+  "scripts": {
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "build-server": "rimraf server && babel ./ --out-dir server/ --ignore ./node_modules,./dist --copy-files",
+    "start": "npm run build && node dist/service.js",
+    "start-staging": "NODE_ENV=staging node service.js",
+    "start-production": "NODE_ENV=production node service.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gantrim/node-console-app-boilerplate.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gantrim/node-console-app-boilerplate/issues"
+  },
+  "homepage": "https://github.com/gantrim/node-console-app-boilerplate#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "rimraf": "^2.6.2"
+  }
+}
