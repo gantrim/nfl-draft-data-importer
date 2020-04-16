@@ -2,7 +2,8 @@
 const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
 
 const development = {
-    appName: "Node Console Boilerplate - Dev"
+    sportsRadarBaseUrl: "http://api.sportradar.us/draft/nfl/trial",
+    sportsRadarApiKey: "7gpb67pwf2ds79q6bxqskmds"
 };
 
 const staging = {
